@@ -1,7 +1,8 @@
 @charset "UTF-8";
 /*Обнуление*/
 @import "../font-awesome-4.7.0/css/font-awesome.min.css";
-
+/* *{ border:1px solid red; box-sizing:border-box; } проверка границ
+*/
 * {
   padding: 0;
   margin: 0;
@@ -60,7 +61,7 @@ body {
   font-family: 'Manrope', sans-serif;
   font-style: normal;
   font-size: 14px;
-
+  background-color: #fffdfdf8;
 }
 h1,h2,h3,h4 {
   font-family: 'Oswald', sans-serif;
@@ -71,6 +72,7 @@ a {
 .wrapper {
   margin: 0 auto;
   max-width: 1200px;
+  
 }
 
 .header {
@@ -233,6 +235,7 @@ a {
 /* header end*/
 /* intro styles start*/
 .intro {
+  max-width: 100%;
   height: 100vh;
   background-image: url(../img/Mask\ Group.png), url(../img/cloudy.png), url(../img/mountaince-image.png);
   background-position: bottom right, top, left;
@@ -289,8 +292,7 @@ margin-bottom: 57px;
   text-align: left;
   background-color: white;
   padding: 20px 38px;
-  max-width: 344px;
-  width: 100%;
+  width: 270px;
   border-radius: 5px;
   
 }
@@ -377,17 +379,15 @@ text-align: center;
 /* main-form styles start*/
 
 
-.main-form {
-  background-color: #E5E5E5;
+.my-form > .wrapper {
+  background-color: white;
   
 }
 .my-form__wrapper{
-  width: 1170px;
-  height: 652px;
-  max-height: 652px;
+  width: 100%;
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.08);
   border-radius: 5px;
-  padding: 50px 70px;
+  padding: 50px 50px;
 }
 .my-form__header {
   margin-bottom: 20px;
@@ -499,5 +499,202 @@ text-transform: uppercase;
 /* main-form styles end*/
 .footer {
   text-align: center;
-  padding: 20px;
+  padding: 0px 20px 20px 20px;
+}
+@media (max-width: 768px) {
+	.wrapper {
+	  max-width: 320px;
+    overflow: hidden;
+	}
+	.intro {
+    width:auto; 
+    max-width:100%;
+	  background-image: url(../img/car-image.png), url(../img/cloudy.png), url(../img/dombay-image.png);
+	  background-position: bottom right, top, top;
+	  background-repeat: no-repeat, no-repeat, no-repeat;
+	  background-size: auto, auto, cover;
+	}
+  .intro__wrapper {
+    max-width: 300px;
+    padding-top: 170px;
+  }
+
+  .intro__tittle {
+    line-height: 36px;
+    font-size: 18px;
+    padding: 0px 10px 0px 10px;
+  }
+  .intro__tittle_text {
+    width: 450px;
+    max-width: 350px;
+    padding: 0px 10px 0px 10px;
+    max-width: 300px;
+    font-size: 17px;
+  }
+	.header__wrapper {
+	  display: flex;
+	  flex-wrap: wrap;
+	  padding: 0;
+	  justify-content: flex-start;
+    align-content: center;
+    align-items: center;
+    max-width: 410px;
+    margin-top: 24px;
+	}
+  .social {
+    margin-right: 15px;
+  }
+
+  .header__logo-link > img {
+    width: 101px;
+    height: 33px;
+  }
+	.header__info-jeep {
+	  display: none;
+	}
+	.header__mail {
+	  display: none;
+	}
+	.phone__tel {
+	  font-weight: 700;
+	  font-size: 16px;
+	  line-height: 22px;
+	  color: #464646;
+	}
+	.phone {
+	  order:2;
+    padding-top: 15px;
+
+	}
+	.phone__time {
+	  display: none;
+	}
+	.call-button{
+	  order:1;
+	  margin-top: 15px;
+	  padding: 10px 15px 11px 10px;
+    margin-left: 0;
+    margin-right: 2px;
+	}
+	.menu__btn {
+	  position: relative;
+	  top: 0;
+	  left: 0;
+	  order:3;
+  
+  
+	}
+  
+	.social__telegramm {
+	}
+	.social {
+    margin-left: 0;
+	}
+.social__instagram {
+  margin-right: 0;
+  margin-left: 0;
+  }
+  a.intro__button {
+    max-width: 1000px;
+    margin-bottom: 30px;
+    padding-top: 14px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .intro__guide {
+    width: 100%;
+    padding: 20px 0px;
+
+  }
+  .service {
+    margin-bottom: 0;
+  }
+  .service__block {
+    margin: 0px 0px 10px 10px;
+    padding: 10px 10px;
+    height: 58px;
+
+  }
+  .service__block:first-child:last-child {
+    flex-direction: row;
+  }
+  .service__block:last-child {
+    margin-right: 30px;
+  }
+  .service_left {
+    width: 125px;
+    order:0;
+  }
+  .service_right {
+	  order:1;
+    width: 115px;
+    margin-left: 10px;
+  }
+
+  .service__main {
+    order: 2;
+  }
+  .service_main-1 {
+
+    order: 3;
+  }
+  .service__main-2 {
+    order: 4;
+  }
+  .service__main-3 {
+    order: 5;
+  }
+  .service__wrapper {
+    display: flex; 
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .service__block_text {
+    display: none;
+  }
+
+  .my-form__wrapper {
+    padding: 25px 15px;
+  }
+  .my-form__header {
+    width: 260px;
+  }
+  .form-main__header  {
+    font-size: 18px;
+    line-height: 34px;
+    width: 260px;
+
+  }
+  .form-main_title {
+    width: 260px;
+    font-size: 16px;
+  }
+  .form-main {
+    display: flex;
+    flex-wrap: wrap;
+    width: 300px;
+    padding-left: 20px;
+  }
+  .form-main__header {
+    margin-bottom: 20px;
+  }
+  .form-main__picture {
+    display: none;
+  }
+  .form-main_disabled {
+    margin-left: -20px;
+    margin-top: 10px;
+  }
+
+}
+@media(min-width: 769px) {
+  .service__block_text-lunch {
+    display: none;
+  }
+  .form-main_disabled {
+    display: none;
+
+  }
+
 }
